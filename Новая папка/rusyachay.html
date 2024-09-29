@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <!-- Подключаем шрифт Caveat из Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Caveat', cursive; /* Применяем рукописный шрифт Caveat */
+            background-color: #f5f5dc;
+            color: #4b4b4b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('ссылка_на_изображение_с_котиками'); /* Фон с котиками */
+            background-size: cover;
+            background-position: center;
+            font-size: 22px; /* Увеличиваем общий размер шрифта */
+        }
+        .container {
+            background-color: rgba(255, 248, 225, 0.9); /* Прозрачный фон контейнера */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: center;
+            z-index: 1; /* Контейнер будет выше фона с котиком */
+        }
+        h1 {
+            color: #b07b4a;
+            font-size: 40px; /* Увеличиваем размер заголовка */
+        }
+        img.profile {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        p {
+            font-size: 24px; /* Увеличиваем размер текста */
+            line-height: 1.3;
+            margin: 10px 0;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #a0522d;
+            font-style: italic;
+            font-size: 20px; /* Немного увеличиваем размер текста в футере */
+        }
+        /* Анимация для картинки справа */
+        @keyframes peekaboo {
+            0% {
+                transform: translateX(100%); /* Картинка полностью спрятана */
+            }
+            50% {
+                transform: translateX(0); /* Картинка полностью видна */
+            }
+            100% {
+                transform: translateX(100%); /* Картинка снова прячется */
+            }
+        }
+
+        /* Картинка справа снизу с анимацией */
+        .cat-image-right {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 350px;
+            height: auto;
+            animation: peekaboo 5s infinite; /* Применяем анимацию */
+        }
+
+        /* Картинка слева снизу */
+        .cat-image-left {
+            position: fixed;
+            left: -73px; /* Картинка уходит за левый край */
+            bottom: -150px; /* Картинка уходит за нижний край */
+            width: 300px;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Адаптивные стили для экранов шириной до 600px */
+        @media (max-width: 600px) {
+            body {
+                font-size: 18px; /* Уменьшаем общий размер шрифта для маленьких экранов */
+            }
+            h1 {
+                font-size: 30px; /* Уменьшаем размер заголовка */
+            }
+            p {
+                font-size: 20px; /* Уменьшаем размер текста */
+            }
+            .cat-image-right {
+                width: 250px; /* Уменьшаем картинку справа */
+            }
+            .cat-image-left {
+                width: 200px; /* Уменьшаем картинку слева */
+                left: -50px; /* Меняем отступы для лучшего отображения */
+                bottom: -100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Здраствуйте, я Руслана</h1>
+    <img class="profile" src="IMG_9869.JPG" >
+    <p>Оставьте чай для Русячай</p>
+    <p>(на благотворительность кошкам)</p>
+         
+    <div class="footer">
+        Буду рада обслуживать Вас снова
+    </div>
+</div>
+
+<img class="cat-image-right" src="ec692889-b834-480f-93ac-c4c127903d99.png">
+<img class="cat-image-left" src="902c04f6-f43d-4156-8858-566e1f9e653e.png">
+
+</body>
+</html>
